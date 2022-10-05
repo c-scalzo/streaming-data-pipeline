@@ -28,13 +28,15 @@ This can be used across industries and use cases such as banking transactions an
 
 
 #### Describe each of the following with an example of how they all fit together: 
- * Topic
- * Producer
- * Consumer 
- * Broker
- * Partition
+ * Topic - 
+ * Producer - 
+ * Consumer - 
+ * Broker - A server with several partitions. Generally a Kafka instance has about 3 brokers.
+ * Partition - An individual message queue, which applications can explictly assign to a record to ensure a certain order is followed, if needed.
 
 #### Describe Kafka Producers and Consumers
+
+A producer creates the message to be delivered by Kafka to a consumer who reads that message in order to take an action. An example is an IOT device sending physical activity information to a health app consumer, that will then use that data to update their dashboards and user health summaries or exercise recommendations.
 
 #### How are consumers and consumer groups different in Kafka? 
 * Helpful resource: [Consumers](https://youtu.be/lAdG16KaHLs)
@@ -42,7 +44,12 @@ This can be used across industries and use cases such as banking transactions an
 
 #### How are Kafka offsets different than partitions? 
 
+An offset is a message that is assigned to a specific partition.
+The offset stays within the partition until it is sent off, an example I can think of is like a car inside a tunnel.
+
 #### How is data assigned to a specific partition in Kafka? 
+
+An application can establish that using a partition key if message ordering is important (ex online bank transfer - reduction from account A should happen prior to debit into account B). Otherwise Kafka assigns partitions to a message at random.
 
 #### Describe immutability - Is data on a Kafka topic immutable? 
 
