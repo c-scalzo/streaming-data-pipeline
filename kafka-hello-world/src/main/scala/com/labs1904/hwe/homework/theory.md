@@ -25,8 +25,7 @@ Kafka helps streaming data systems to be fast and accurate. The most common exam
 #### What is Kafka?
 * Helpful resource: [Kafka in 6 minutes](https://youtu.be/Ch5VhJzaoaI) 
 
-It is a message queue system that transmits messages containing data from a system A (producer) that creates the data on to a consumer B which ingests said data. 
-This can be used across industries and use cases such as banking transactions and "real-time" event messages ie: weather or medical data.
+It is a message queue system that transmits messages containing data from a system A (producer) that creates the data on to a consumer B which ingests said data. This can be used across industries and use cases such as banking transactions and "real-time" event messages ie: weather or medical data.
 
 
 #### Describe each of the following with an example of how they all fit together: 
@@ -41,6 +40,9 @@ This can be used across industries and use cases such as banking transactions an
 A producer creates the message to be delivered by Kafka to a consumer who reads that message in order to take an action. An example is an IOT device sending physical activity information to a health app consumer, that will then use that data to update their dashboards and user health summaries or exercise recommendations.
 
 #### How are consumers and consumer groups different in Kafka? 
+
+A consumer receives a messages from a partition, consumer groups are a collection of consumers that read the same topic but from unique partitions.
+
 * Helpful resource: [Consumers](https://youtu.be/lAdG16KaHLs)
 * Helpful resource: [Confluent Consumer Overview](https://youtu.be/Z9g4jMQwog0)
 
@@ -55,9 +57,16 @@ An application can establish that using a partition key if message ordering is i
 
 #### Describe immutability - Is data on a Kafka topic immutable? 
 
+Yes, a topic is immutable because a message cannot be edited or removed from the queue once partitioned.
+There may be a failure in the delivery or reading of a message, but it's content itself cannot be changed or ammended.
+
+
 #### How is data replicated across brokers in kafka? If you have a replication factor of 3 and 3 brokers, explain how data is spread across brokers
 * Helpful resource [Brokers and Replication factors](https://youtu.be/ZOU7PJWZU9w)
 
+Data (topics) are replicated to other brokers as a precaution. 
+Replication of 3 across 3 brokers means each topic will have a copy within each broker, with only 1 of those being the leader. The additional 2 replicas will never deploy unless there is a failure or outage.
+
 #### What was the most fascinating aspect of Kafka to you while learning? 
 
-It's compute power - it can write/transmit an insane amount of messages
+Its compute power - it can write/transmit an insane amount of messages
