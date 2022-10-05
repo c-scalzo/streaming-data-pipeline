@@ -59,3 +59,5 @@ An application can establish that using a partition key if message ordering is i
 * Helpful resource [Brokers and Replication factors](https://youtu.be/ZOU7PJWZU9w)
 
 #### What was the most fascinating aspect of Kafka to you while learning? 
+
+It's compute power - it can write/transmit an insane amount of messages
