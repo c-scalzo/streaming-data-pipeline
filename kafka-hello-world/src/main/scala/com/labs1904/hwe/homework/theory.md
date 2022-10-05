@@ -22,6 +22,9 @@ reword confusing descriptions in a way that makes sense to you.
 
 #### What is Kafka?
 * Helpful resource: [Kafka in 6 minutes](https://youtu.be/Ch5VhJzaoaI) 
+it is a message queue system that transmits messages containing data from a system A (producer) that creates the data on to a consumer B which ingests said data. 
+This can be used across industries and use cases such as banking transactions and "real-time" event messages ie: weather or medical data.
+
 
 #### Describe each of the following with an example of how they all fit together: 
  * Topic
