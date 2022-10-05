@@ -20,6 +20,8 @@ reword confusing descriptions in a way that makes sense to you.
 #### What problem does Kafka help solve? Use a specific use case in your answer 
 * Helpful resource: [Confluent Motivations and Use Cases](https://youtu.be/BsojaA1XnpM)
 
+Kafka helps streaming data systems to be fast and accurate. The most common example is banking and the improvements with mobile and internet banking processes. Another good example are cellphone notifications, from connected devices for event-driven apps like a code sent to a phone for 2 factor authentication.
+
 #### What is Kafka?
 * Helpful resource: [Kafka in 6 minutes](https://youtu.be/Ch5VhJzaoaI) 
 
@@ -29,8 +31,8 @@ This can be used across industries and use cases such as banking transactions an
 
 #### Describe each of the following with an example of how they all fit together: 
  * Topic - 
- * Producer - 
- * Consumer - 
+ * Producer - Application or system generating messages, these are often a data streaming system transmitting a message containing data or the need for action.
+ * Consumer - Application or system reading message (often ingesting data) and taking some action.
  * Broker - A server with several partitions. Generally a Kafka instance has about 3 brokers.
  * Partition - An individual message queue, which applications can explictly assign to a record to ensure a certain order is followed, if needed.
 
