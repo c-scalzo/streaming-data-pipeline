@@ -13,7 +13,7 @@ object KafkaHomework {
    */
 
 //  //TODO: If these are given in class, change them so that you can run a test. If not, don't worry about this step
-  val BootstrapServer = "b-3-public.hwekafkacluster.6d7yau.c16.kafka.us-east-1.amazonaws.com:9196,b-2-public.hwekafkacluster.6d7yau.c16.kafka.us-east-1.amazonaws.com:9196,b-1-public.hwekafkacluster.6d7yau.c16.kafka.us-east-1.amazonaws.com:9196"
+  val BootstrapServer = "CHANGE-ME"
   val Topic: String = "connection-test"
 
   implicit val formats: DefaultFormats.type = DefaultFormats
