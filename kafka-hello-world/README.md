@@ -59,10 +59,13 @@ There is likely a problem with your IP address - fill out the [What's Your IP?](
 #### When I run the ConnectionTest, it complains "Failed to construct the kafka consumer!: Failed to load SSL keystore"
 
 If you see an error message like this:
+
+
 `
 Exception in thread "main" org.apache.kafka.common.KafkaException: Failed to construct kafka consumer
 ...
-Caused by: org.apache.kafka.common.KafkaException: org.apache.kafka.common.KafkaException: Failed to load SSL keystore src\main\resources\kafka.client.truststore.jks of type JKS`
+
+[//]: # (Caused by: org.apache.kafka.common.KafkaException: org.apache.kafka.common.KafkaException: Failed to load SSL keystore src\main\resources\kafka.client.truststore.jks of type JKS`)
 
 then there are 2 things to double check here:
 

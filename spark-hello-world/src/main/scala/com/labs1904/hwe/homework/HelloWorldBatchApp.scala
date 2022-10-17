@@ -10,13 +10,13 @@ object HelloWorldBatchApp {
   def main(args: Array[String]): Unit = {
     try {
       logger.info(s"$jobName starting...")
-      //TODO: What is a spark session - Why do we need this line?
+      //TODO: What is a spark session - Why do we need this line? It initiates Spark
       val spark = SparkSession.builder()
         .appName(jobName)
         .config("spark.sql.shuffle.partitions", "3")
-        //TODO- What is local[*] doing here?
+        //TODO- What is local[*] doing here? It is setting all local cores as compute power for spark
         .master("local[*]")
-        //TODO- What does Get or Create do?
+        //TODO- What does Get or Create do? It starts a spark session if there isn't one, and gets the specified session if existing
         .getOrCreate()
 
       import spark.implicits._
